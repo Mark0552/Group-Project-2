@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+}
+
+#video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    height: 100vh;
+    background-color: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+#carouselRow {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
+#myBtn {
+    background: transparent;
+    border: transparent; 
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 100px;
+    color: ivory;
+}
+
+.sidenav{ 
+background-color: transparent
+
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+
+@media screen and (min-width: 600px) {
+    div.example {
+        font-size: 80px;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+        #video {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+
+    body {
+        background: url('../images/background.jpg');
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.example {
+        font-size: 30px;
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        ...
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        ...
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        ...
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        ...
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        ...
+    }
+
+
+
+    /* #main > article {
+    flex: 1;
+    
+}
+
+#main > nav, 
+#main > aside {
+    flex: 0 0 20vw;
+    background: beige ;
+}
+#main > nav {
+    order: -1;
+}
+
+header, footer {
+    background: 343a40;
+    height: 20vh;
+}
+
+header, footer, article, nav, aside {
+    padding: 1em;
+} */
