@@ -15,44 +15,66 @@
         </style>
 </head>
 
+
+
 <body>
         <nav class="navbar navbar-default">
                 <div class="container-fluid">
                         <div class="navbar-header">
-                                <a class="navbar-brand" href="/logout">
+                                <a class="navbar-brand" href="../public/logout.html">
                                         Logout
                                 </a>
-                                <a class="navbar-brand" href="/members.html">
+                                <a class="navbar-brand" href="../public/add.html">
+                                        Add
+                                </a>
+                                <a class="navbar-brand" href="../public/donate.html">
+                                        Donate
+                                </a>
+                                <a class="navbar-brand" href="../public/wear.html">
+                                        Wear
+                                </a>
+                                <a class="navbar-brand" href="../public/login.html">
+                                        Login
+                                </a>
+                                <a class="navbar-brand" href="../public/signup.html">
+                                        Sign Up
+                                </a>
+                                <a class="navbar-brand" href="../public/home.html">
                                         Home
                                 </a>
-                                <a class="navbar-brand" href="/donate.html">
-                                    Donate
-                             </a>
-                             <a class="navbar-brand" href="/donate.html">
-                                     Wear
-                              </a>
-                              <a class="navbar-brand" href="/add.html">
-                                Add
-                        </a>
                         </div>
                 </div>
         </nav>
         <div class="container">
-                <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                                <h2>Wear <span class="member-name"></span></h2>
-                                
+                <div class="container">
+                        <video playsinline muted autoplay loop id="video">
+                                <source src="../style/videos/Project2.m4v" />
+                        </video>
 
-        <div class="container">
-                <div id="picsDonate"></div>
-        </div>
+                        <div class="row" id="silhouette"
+                                style="text-align: center; position: relative; bottom: -550px; left: 30px">
+                                <img src="../style/images/dress_silhouette.png" />
+                        </div>
 
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/members.js"></script>
-        <script type="text/javascript" src="./javascript/add.js"></script>
+                        <div id="myBtnRow" class="row" style="text-align: center; position: relative; bottom: 100px;">
+                                <a id="myBtn" class="button "><i class="">Welcome to Your Closet</i></a>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-6 col-md-offset-3" id="wearBtn">
+                                        <h2 style="text-align: center">Wear <span class="member-name button"></span></h2>
+
+
+                                        <div class="container">
+                                                <div id="picsDonate"></div>
+                                        </div>
+
+
 
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript" src="js/members.js"></script>
+<script type="text/javascript" src="./javascript/add.js"></script>
 
 </html>

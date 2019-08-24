@@ -6,19 +6,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="../style/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            </div>
-        </div>
-    </nav>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="../public/logout.html">
+                      Logout
+                    </a>
+                    <a class="navbar-brand" href="../public/add.html">
+                      Add
+                    </a>
+                    <a class="navbar-brand" href="../public/donate.html">
+                      Donate
+                    </a>
+                    <a class="navbar-brand" href="../public/wear.html">
+                      Wear
+                    </a>
+                    <a class="navbar-brand" href="../public/login.html">
+                          Login
+                        </a>
+                        <a class="navbar-brand" href="../public/signup.html">
+                          Sign Up
+                        </a>
+                        <a class="navbar-brand" href="../public/home.html">
+                          Home
+                        </a>
+                  </div>
+                </div>
+              </nav>
     <div class="container">
+            <video playsinline muted autoplay loop id="video">
+                    <source src="../style/videos/Login_Signup Page.m4v">
+              </video>
+          
+              <div class="row" id="silhouette" style="text-align: center; position: relative; bottom: -650px; left: 50px">
+                    <img src="../style/images/dress_silhouette.png">
+            </div>
+          
+          <div id="myBtnRow" class="row" style="text-align: center; position: relative; bottom: 100px;">
+                  <a id="myBtn" class="button "><i class="">Welcome to Your
+                                  Closet</i></a>
+          </div>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-6 col-md-offset-3" id="loginRow" style="width:800px">
                 <h2>Sign Up Form</h2>
                 <form class="signup">
                     <div class="form-group">
@@ -45,7 +78,12 @@
     <script type="text/javascript" src="javascript/newuser.js"></script>
 
 </body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="javascript/signin.js"></script>
+<script src="../public/javascript/clothing.js"> </script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"> </script>
 </html>
 
-</html>

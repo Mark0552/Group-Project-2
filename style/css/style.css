@@ -3,6 +3,60 @@
     margin: 0; 
   }
 
+  #carouselRow {
+    width: 750px;
+    height: 275px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: 350px;
+}
+#carouselRow2 {
+    width: 750px;
+    height: 275px;
+    margin-right: 350px;
+    margin-left: -100px;
+}
+#carouselRow3 {
+    width: 750px;
+    height: 275px;
+    margin-right: 350px;
+    margin-left: -100px;
+}
+#carouselRow4 {
+    width: 750px;
+    height: 275px;
+    margin-right: auto;
+    margin-left: 350px;
+    margin-bottom: 50px;
+}
+
+#signupRow, #loginRow { 
+color: black; 
+position: relative;
+bottom: 60px; 
+background:white; 
+left: -90px;
+}
+
+#addClothing { 
+color: black; 
+background:white; 
+height: 175px;
+bottom: 60px; 
+position: relative;
+}
+
+#addClothing > form, input { 
+margin:10px;
+
+}
+#addClothing > h2 { 
+    margin:20px;
+
+}
+    
+
+
 #picsContainer img{
     padding: 10px;
     width: 800px;
@@ -19,20 +73,29 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
-#carouselRow {
-    height: 100px;
-    width: 100px;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-}
+
 
 img {
     height: 200px;
     width: 200px;
 }
+#donateBtn > h2 { 
+    background: transparent;
+    border: transparent; 
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 100px;
+    color: ivory;
+}
 
-#myBtn {
+#wearBtn > h2 { 
+    background: transparent;
+    border: transparent; 
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 100px;
+    color: ivory;
+}
+
+#myBtn  {
     background: transparent;
     border: transparent; 
     font-family: 'Reenie Beanie', cursive;
