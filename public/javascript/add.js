@@ -26,7 +26,7 @@ $(document).ready(function () {
   function postPics(results) {
 
     results.forEach(pic => {
-            var picLink = pic.clothingLink.slice(7);
+        var picLink = pic.clothingLink.slice(7);
 
       var card = `
           <div class="card mbuttom"  style="width: 450px; border: 1px solid blue;" >
@@ -41,17 +41,41 @@ $(document).ready(function () {
   }
 
   ////// deletinggg////////////
-  $("#picsContainer").on("click", "#deleteCard", function (e) {
-    e.preventDefault();
-    var picId1 = ($(this).data("id"))
-    addInputBoxes(picId1)
+$(document).on("click", "#deleteCard",handlePostDelete)
+  function deleteCloths(id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/add/" + id
+    })
+      .then(function() {
+        getPics();
+      });
+  }
+  function handlePostDelete() {
+    var currentCloths = $(this)
+      .data("id");
+      console.log(currentCloths)
+    deleteCloths(currentCloths);
+  }
+
+  //////////donateeeee///////////
+  $(document).on("click", "#donateCard",handlePostDelete)
+  function doCloths(id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/add/" + id
+    })
+      .then(function() {
+        getPics();
+      });
+  }
+  function handlePostDelete() {
+    var currentCloths = $(this)
+      .data("id");
+      console.log(currentCloths)
+    deleteCloths(currentCloths);
+  }
+
+
   });
-
-  function addInputBoxes(id) {
-    $("#picsContainer").remove();
-  };
-
-  //////////donateeeee//////////
-
-  });
-
+// });

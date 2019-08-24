@@ -1,6 +1,9 @@
+
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+
+var userEmail = "";
 //
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -48,7 +51,10 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id
+
       });
+      userEmail = req.user.id;
+
     }
   });
 
@@ -65,8 +71,14 @@ var db = require('../models');
 // default options
 app.use(fileUpload());
 
-app.get("/api/add", function(req, res) {
-  db.Cloths.findAll({}).then(result => {
+app.get("/api/add/", function(req, res) {
+  console.log(req.params.id, 'this');
+  
+  db.Cloths.findAll({
+    // where: {
+    //   id: req.params.id
+    // }
+  }).then(result => {
     res.json(result);
   }).catch((err) => {
       console.log(err);
@@ -79,11 +91,17 @@ app.post('/upload', function(req, res) {
   }
   // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
   var body = req.body;
+
   let sampleFile = req.files.sampleFile;
 
-  db.Cloths.findAll({}).then(result => {
+  db.Cloths.findAll({
+    // where: {
+    //   id: req.params.id
+    // }
+  }).then(result => {
     var count = result.length;
     var picName = 'public/images/picture_' + count + '.jpg'
+    
    
     // Use the mv() method to place the file somewhere on your server
     sampleFile.mv(picName, function (err) {
@@ -93,6 +111,10 @@ app.post('/upload', function(req, res) {
         else {
           var body = {
             clothingLink: picName,
+            owner: userEmail,
+            status: "active",
+            color: picColor
+
                       }
         db.Cloths.create(body).then((result) => {
           // res.send('File uploaded!');
@@ -105,6 +127,14 @@ app.post('/upload', function(req, res) {
     });
   });
 
+  app.delete("/api/add/:id", function(req, res) {
+    db.Cloths.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbCloths) {
+      res.json(dbCloths);
+    });
+   });
 };
-
 
