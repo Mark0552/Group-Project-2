@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
 
-var sequelizeConn = new Sequelize("", "root", "password", {
+var sequelizeConn = new Sequelize("clothing_db", "root", "password", {
     host: "localhost",
     port: 3305,
     dialect: "mysql",

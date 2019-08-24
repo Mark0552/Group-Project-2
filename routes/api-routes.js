@@ -51,4 +51,60 @@ module.exports = function(app) {
       });
     }
   });
+
+
+/////////////////////clothingggggggg//////////////////
+
+var express = require('express');
+var fileUpload = require('express-fileupload');
+
+var db = require('../models');
+
+// var app = express.app();
+
+// default options
+app.use(fileUpload());
+
+app.get("/api/add", function(req, res) {
+  db.Cloths.findAll({}).then(result => {
+    res.json(result);
+  }).catch((err) => {
+      console.log(err);
+    });
+ })
+
+app.post('/upload', function(req, res) {
+  if (Object.keys(req.files).length == 0) {
+    return res.status(400).send('No files were uploaded.');
+  }
+  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+  var body = req.body;
+  let sampleFile = req.files.sampleFile;
+
+  db.Cloths.findAll({}).then(result => {
+    var count = result.length;
+    var picName = 'public/images/picture_' + count + '.jpg'
+   
+    // Use the mv() method to place the file somewhere on your server
+    sampleFile.mv(picName, function (err) {
+      if (err) {
+      return res.status(500).send(err);
+    }
+        else {
+          var body = {
+            clothingLink: picName,
+                      }
+        db.Cloths.create(body).then((result) => {
+          // res.send('File uploaded!');
+          res.redirect("/add")
+          }).catch((err) => {
+            console.log(err);
+          });
+        }
+      });
+    });
+  });
+
 };
+
+
