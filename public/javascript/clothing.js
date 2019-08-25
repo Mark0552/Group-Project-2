@@ -10,13 +10,14 @@
   });
 
 
-$("#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4").hide(200);
+$("#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6").hide(200);
   $("#myBtn, #silhouette").on("click", function () {
     $('#carouselRow').delay(3000).fadeIn('slow');
     $('#carouselRow2').delay(3000).fadeIn('slow');
     $('#carouselRow3').delay(3000).fadeIn('slow');
     $('#carouselRow4').delay(3000).fadeIn('slow');
     $('#carouselRow5').delay(3000).fadeIn('slow');
+    $('#carouselRow6').delay(3000).fadeIn('slow');
     $("#myBtnRow, #silhouette").hide(2000).fadeout('slow');
     M.AutoInit();
 

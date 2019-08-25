@@ -3,31 +3,14 @@
     margin: 0; 
   }
 
-  #carouselRow {
-    width: 750px;
+  #carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 {
+    width: 350px;
     height: 275px;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: 350px;
+    float: left;
 }
-#carouselRow2 {
-    width: 750px;
-    height: 275px;
-    margin-right: 350px;
-    margin-left: -100px;
-}
-#carouselRow3 {
-    width: 750px;
-    height: 275px;
-    margin-right: 350px;
-    margin-left: -100px;
-}
-#carouselRow4 {
-    width: 750px;
-    height: 275px;
-    margin-right: auto;
-    margin-left: 350px;
-    margin-bottom: 50px;
+
+#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 > .carousel {
+margin: 20px;
 }
 
 #signupRow, #loginRow { 
@@ -39,8 +22,7 @@ left: -90px;
 }
 
 #addClothing { 
-color: black; 
-background:white; 
+color: ivory; 
 height: 175px;
 bottom: 60px; 
 position: relative;
@@ -48,15 +30,12 @@ position: relative;
 
 #addClothing > form, input { 
 margin:10px;
-
 }
 #addClothing > h2 { 
     margin:20px;
 
 }
     
-
-
 #picsContainer img{
     padding: 10px;
     width: 800px;
@@ -72,8 +51,6 @@ margin:10px;
     background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
     transform: translateX(-50%) translateY(-50%);
 }
-
-
 
 img {
     height: 200px;
