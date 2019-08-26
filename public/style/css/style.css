@@ -2,48 +2,6 @@
     box-sizing: border-box;
     margin: 0; 
   }
-
-.navbar-brand { 
-    margin: 10px; 
-}
-  #carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 {
-    width: 350px;
-    height: 275px;
-    float: left;
-}
-
-#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 > .carousel {
-margin: 20px;
-}
-
-#signupRow, #loginRow { 
-color: black; 
-position: relative;
-bottom: 60px; 
-background:white; 
-left: -90px;
-}
-
-#addClothing { 
-color: ivory; 
-height: 175px;
-bottom: 60px; 
-position: relative;
-}
-
-#addClothing > form, input { 
-margin:10px;
-}
-#addClothing > h2 { 
-    margin:20px;
-
-}
-    
-#picsContainer img{
-    padding: 10px;
-    width: 300px;
-    height: 300px;
-}
 #video {
     position: fixed;
     top: 50%;
@@ -56,37 +14,133 @@ margin:10px;
 }
 
 img {
-    height: 250px;
+    height: 200px;
     width: 300px;
 }
 #donateBtn > h2 { 
     background: transparent;
     border: transparent; 
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 100px;
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
     color: ivory;
 }
 
+#favoriteItem:hover { 
+    color: pink; 
+}
 #wearBtn > h2 { 
     background: transparent;
     border: transparent; 
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 100px;
+    font-family: 'Tangerine', cursive;
     color: ivory;
 }
 
 #myBtn  {
     background: transparent;
     border: transparent; 
-    font-family: 'Reenie Beanie', cursive;
+    font-family: 'Tangerine', cursive;
     font-size: 100px;
     color: ivory;
 }
 
-.sidenav{ 
-background-color: transparent
+.navbar-brand { 
+    margin: 10px; 
 }
 
+.navbar { 
+    border-radius: 10px; 
+    box-shadow: 2px; 
+    overflow: hidden;
+}
+
+#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 {
+    width: 300px;
+    height: 200px;
+    float: left;
+    position: relative;
+    left: 30px; 
+    bottom: -275px; 
+}
+
+#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 > .carousel {
+margin: 30px;
+}
+
+#signupRow, #loginRow { 
+color: black; 
+position: relative;
+bottom: 60px; 
+background:white; 
+left: -90px;
+}
+
+#addClothing { 
+color: ivory !important;
+text-align: center;
+font-family:'Tangerine', cursive;
+bottom: 400px; 
+left: 50px;
+}
+
+#addClothing > form, input { 
+margin:10px;
+text-align: center"
+}
+#addClothing > h2 { 
+margin:20px;
+
+}
+    
+#picsContainer{
+float: left; 
+position: relative;
+bottom: 600px;
+left: 30px;
+text-align: center;
+min-width: 100%;
+}
+
+#picsContainer > .card{ 
+margin: 10px; 
+}
+
+#picsContainer2{
+    float: left; 
+    position: relative;
+    bottom: 525px;
+    left: 30px;
+    text-align: center;
+    min-width: 100%;
+}
+
+#picsContainer2 > .carousel-item{
+    margin: 10px; 
+
+}
+.card-image { 
+width: 200px; 
+}
+.card-panel, .card-image, .card { 
+border-radius: 15px;
+overflow: hidden;
+}
+
+.btn {
+border-radius: 5px;
+overflow: hidden;
+margin: 2px; 
+width: 100px; 
+text-align:center;
+}
+#uploadbtn { 
+    left: 200px;
+    position: relative;
+}
+
+#fileUpload { 
+color: pink; 
+
+}
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -132,28 +186,23 @@ background-color: transparent
     }
 
     /* Extra small devices (phones, 600px and down) */
-    /* @media only screen and (max-width: 600px) {
-        ...
-    } */
+    @media only screen and (max-width: 600px) {   
+    }
 
     /* Small devices (portrait tablets and large phones, 600px and up) */
-    /* @media only screen and (min-width: 600px) {
-        ...
-    } */
+    @media only screen and (min-width: 600px) {   
+    }
 
     /* Medium devices (landscape tablets, 768px and up) */
-    /* @media only screen and (min-width: 768px) {
-        ...
-    } */
+    @media only screen and (min-width: 768px) {
+    }
 
     /* Large devices (laptops/desktops, 992px and up) */
-    /* @media only screen and (min-width: 992px) {
-        ...
-    } */
+    @media only screen and (min-width: 992px) {
+    }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
-    /* @media only screen and (min-width: 1200px) {
-        ...
-    } */
+    @media only screen and (min-width: 1200px) {
+    }
 
 }

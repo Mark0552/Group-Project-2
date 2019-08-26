@@ -11,6 +11,7 @@
 
 
 $("#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6").hide(200);
+$("#addCloset").hide(); 
 
   $("#myBtn, #silhouette").on("click", function () {
     $('#carouselRow').delay(3000).fadeIn('slow');
@@ -19,6 +20,7 @@ $("#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #ca
     $('#carouselRow4').delay(3000).fadeIn('slow');
     $('#carouselRow5').delay(3000).fadeIn('slow');
     $('#carouselRow6').delay(3000).fadeIn('slow');
+    $('#addCloset').delay(3000).fadeIn('slow');
     $("#myBtnRow, #silhouette").hide(2000).fadeout('slow');
     M.AutoInit();
 
@@ -31,9 +33,12 @@ var windowTimeout = setTimeout(function () {
   $('#carouselRow4').delay(3000).fadeIn('slow');
   $('#carouselRow5').delay(3000).fadeIn('slow');
   $('#carouselRow6').delay(3000).fadeIn('slow');
+  $('#addCloset').delay(3000).fadeIn('slow');
   $("#myBtnRow, #silhouette").hide(2000).fadeout('slow');
   M.AutoInit();
-  
 }, 4000);
+
+$('#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6').delay(8000).animate({
+  bottom: '-30px'}, "slow");
 
 

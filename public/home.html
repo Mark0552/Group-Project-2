@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style/css/reset.css">
     <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Great+Vibes|Reenie+Beanie&display=swap" rel="stylesheet">
 
@@ -15,18 +16,21 @@
 </head>
 
 <body>
+<!-- Start of the Navbar outside the container. -->
 <nav class="navbar navbar-default">
 <div class="container-fluid">
-        <div class="navbar-header">
-        <a class="navbar-brand" href="/logout.html">Logout</a>
-        <a class="navbar-brand" href="/add.html">Add</a>
-        <a class="navbar-brand" href="/donate.html">Donate</a>
-        <a class="navbar-brand" href="/wear.html">Wear</a>
-        <a class="navbar-brand" href="/members.html">Members</a>
-        <a class="navbar-brand" href="/home.html">Home</a>
-        </div>
+<div class="navbar-header">
+<a class="navbar-brand" href="/logout.html">Logout</a>
+<a class="navbar-brand" href="/add.html">Add</a>
+<a class="navbar-brand" href="/donate.html">Donate</a>
+<a class="navbar-brand" href="/wear.html">Wear</a>
+<a class="navbar-brand" href="/members.html">Members</a>
+<a class="navbar-brand" href="/home.html">Home</a>
+</div>
 </div>
 </nav>
+<!-- End of the Navbar outside the container. -->
+
 
 <div class="container"> 
         
@@ -34,13 +38,16 @@
         <source src="/style/videos/Project2.m4v">
 </video>
 
-<div class="row" id="silhouette" style="text-align: center; position: relative; bottom: -350px; left: 50px">
-        <img src="../style/images/dress_silhouette.png">
+<div class="row" id="silhouette" style="text-align: center; position: relative; bottom: -200px; left: 50px">
+        <img style="height: 300px" src="../style/images/dress_silhouette.png">
 </div>
 
-<div id="myBtnRow" class="row" style="text-align: center; position: relative; bottom: 100px;">
+<div id="myBtnRow" class="row" style="text-align: center; position: relative; bottom: 300px;">
 <a id="myBtn" class="button"><i class="">Welcome to Your Closet</i></a>
 </div>
+
+<h2 id="addCloset" style="color: ivory; font-family:'Tangerine', cursive; text-align: center; font-size: 100px;">Your Closet <span class="member-name"></span></h2>
+
                                 
         <div class="carousel" id="carouselRow">
                 <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
@@ -48,20 +55,20 @@
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
                         src="/images/puff_top.jpeg"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/picture_2.jpg"></a>
+                        src="/images/pattern_top.png"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/picture_3.jpg"></a>
+                        src="/images/pink_top.jpg"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
                         src="/images/redtop.png"></a>
         </div>
 
             <div class="carousel" id="carouselRow2">
                 <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/picture_0.jpg"></a>
+                        src="/images/bluedress.png"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/picture_1.jpg"></a>
+                        src="/images/pink_dress.png"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/wrap_dresses.jpeg"></a>
+                        src="/images/wrap_dresses.png"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
                         src="/images/dresses_floral.jpeg"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
@@ -71,9 +78,9 @@
 
             <div class="carousel" id="carouselRow3" >
                 <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/shoes_0.jpg"></a>
+                        src="/images/shoes_0.png"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/shoes_1.jpg"></a>
+                        src="/images/shoes_.jpg"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
                         src="/images/shoes_3.jpg"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
@@ -88,7 +95,7 @@
                 <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
                         src="/images/blackpants.png"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/alfani_pants.jpeg"></a>
+                        src="/images/ alfani_pants.jpg"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
                         src="/images/greypants.png"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
@@ -112,15 +119,15 @@
 
         <div class="carousel" id="carouselRow6">
                 <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/gem.jpeg"></a>
+                        src="/images/ gem.jpeg"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/faux_Gem_Stud_Earring.jpeg"></a>
+                        src="/images/faux_Gem_Stud_Earring.jpg"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/faux_Gem_Ear_Cuff.jpeg"></a>
+                        src="/images/faux_leather_Hip_belt.png"></a>
                 <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
                         src="/images/scrunchie.jpeg"></a>
                 <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/faux_leather_Hip_belt.jpeg"></a>
+                        src="/images/faux_Gem_Ear_Cuff.png"></a>
         </div>
 </div>
 

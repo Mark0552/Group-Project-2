@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="/style/css/style.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cinzel|Great+Vibes|Reenie+Beanie&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Great+Vibes|Reenie+Beanie+Tangerine&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -37,43 +38,55 @@
 
 <!-- Start of the Video Background. -->
 <video playsinline muted autoplay loop id="video">
-<source src="../style/videos/Project2.m4v" />
+<source src="/style/videos/Project2.m4v" />
 </video>
 <!-- End of the Video Background. -->
 
 <!-- Start of the Silhouette Image/Logo. -->
-<div class="row" id="silhouette"
-style="text-align: center; position: relative; bottom: -450px; left: 30px">
-<img src="../style/images/dress_silhouette.png" />
+<div class="row">
+<div id="silhouette"
+style="text-align: center; position: relative; bottom: -650px; left: 50px;">
+<img style="height: 300px" src="../style/images/dress_silhouette.png" />
+</div>
 </div>
 <!-- End of the Silhouette Image/Logo. -->
 
 <!-- Start of the Welcome to Your Closet Button. -->
-<div id="myBtnRow" class="row" style="text-align: center; position: relative; bottom: 300px;">
+<div id="myBtnRow" class="row" style="text-align: center; position: relative; bottom: 350px; font-family:'Tangerine', cursive;">
 <a id="myBtn" class="button "><i class="">Welcome to Your Closet</i></a>
 </div>
 <!-- End of the Welcome to Your Closet Button. -->
 
 <!-- Start of the Add Form. -->
 <div class="row">
-<div class="col-md-6 col-md-offset-3" id="addClothing" style="text-align: center; position: relative; bottom: 350px;">
-<h2 style="color: ivory;">Add Clothing <span class="member-name"></span></h2>
-<form ref="uploadForm" id="uploadForm"action="/upload" method="post" encType="multipart/form-data">
-<input type="file" name="sampleFile" style="left: 200px; position: relative;"/>
+<div class="col-md-6 col-md-offset-3" id="addClothing">
+<h2 style="color: ivory; font-family:'Tangerine', cursive;">Add To Your Closet <span class="member-name"></span></h2>
+</div> 
+</div> 
+<div class="row"> 
+<div class="carousel" id="picsContainer2" style="text-align: center;">
+</div> 
+</div>
+
+<div class="row" style="position: relative; bottom: 600px; width: 600px; left: 100px;"> 
+<form id="fileUpload" ref="uploadForm" id="uploadForm" action="/upload" method="post" encType="multipart/form-data">
+<input style="position: relative; left:200px;" type="file" name="sampleFile"/>
 <input type="text" id="namepic" name="imageName" placeholder="Image Name"/>
 <input type="text" id="colorpic" name="imageColor" placeholder="Image Color">
-<input type="submit" value="Upload!" class="btn btn-primary" />
+<input type="submit" value="Upload" id="uploadbtn" class="pink lighten-4 btn btn-primrary"/>
 </form>
-</div>
 </div>
 <!-- End of the Add Form. -->
 
 
 <!-- End of the Container. -->
 </div>
-
 <!-- Start of the Picture Add Container. -->
-<div id="picsContainer" style="position: relative; left: 610px; bottom:250px;"></div>
+
+    
+<div class="row" id="picsContainer" style="text-align: center;">
+
+  </div>
 <!-- End of the Picture Add Container. -->
 
   </body>
@@ -82,6 +95,5 @@ style="text-align: center; position: relative; bottom: -450px; left: 30px">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://code.jquery.com/jquery.js"></script>
   <script type="text/javascript" src="/javascript/add.js"></script>
-  <script type="text/javascript" src="javascript/members.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </html>
