@@ -112,7 +112,7 @@ app.post('/upload', function(req, res) {
             clothingLink: picName,
             owner: userEmail,
             status: "active",
-            color: picColor
+            // color: picColor
 
                       }
         db.Cloths.create(body).then((result) => {

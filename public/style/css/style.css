@@ -3,6 +3,9 @@
     margin: 0; 
   }
 
+.navbar-brand { 
+    margin: 10px; 
+}
   #carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 {
     width: 350px;
     height: 275px;
@@ -38,7 +41,7 @@ margin:10px;
     
 #picsContainer img{
     padding: 10px;
-    width: 800px;
+    width: 300px;
     height: 300px;
 }
 #video {
@@ -53,8 +56,8 @@ margin:10px;
 }
 
 img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 300px;
 }
 #donateBtn > h2 { 
     background: transparent;

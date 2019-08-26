@@ -78,4 +78,3 @@ $(document).on("click", "#deleteCard",handlePostDelete)
 
 
   });
-// });
