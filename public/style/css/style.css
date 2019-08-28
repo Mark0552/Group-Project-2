@@ -64,6 +64,15 @@
     text-align: center;
 }
 
+
+#picksWear > .card{ 
+    margin: 30px;
+    width: 200px; 
+    float: left;
+    box-shadow: 2px; 
+    text-align: center;
+}
+
 #picsContainer2 > .card-image, img {
 float: left;
 width: 175px; 

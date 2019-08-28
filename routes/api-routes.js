@@ -173,8 +173,17 @@ app.get("/api/donate", function (req, res) {
   });
 }) 
   
-
-app.get("/api/wear", function (req, res) {
+app.put("/api/home/:id", function (req, res) {
+  console.log(req.params)
+  db.Cloths.update(
+  
+    {status: "wear"},
+    {where:{id: req.params.id}}
+    
+  ).then(function (dbCloths) {
+    res.json(dbCloths);
+  })  
+app.get("/api/wear/:id", function (req, res) {
   console.log(req.params.id, 'this');
   db.Cloths.findAll({
     where: {
@@ -189,16 +198,7 @@ app.get("/api/wear", function (req, res) {
   });
 })
   
-app.put("/api/home/:id", function (req, res) {
-  console.log(req.params)
-  db.Cloths.update(
-  
-    {status: "wear"},
-    {where:{id: req.params.id}}
-    
-  ).then(function (dbCloths) {
-    res.json(dbCloths);
-  })  
+
   
 });
 

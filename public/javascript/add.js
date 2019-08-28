@@ -38,7 +38,7 @@ $(document).ready(function () {
   function getWearPics() {
     $.ajax({
       type: "GET",
-      url: "/api/wear",
+      url: "/api/home",
       dataType: "JSON",
     }).then((result) => {
       console.log(result);
@@ -93,13 +93,12 @@ $(document).ready(function () {
   function postWearPics(results) {
     results.forEach(pic => {
       var picLink = pic.clothingLink.slice(7);
-
-      var card = `<div class="col s3 card hoverable" style="border-radius: 30px; float: left; margin: 10px; text-align:center; left: 125px;">
+      var card = `<div class="col s4 card hoverable" style="border-radius: 30px; float: left; margin: 30px; height: 400px; text-align:center; left: 125px;">
       <i style="z-index: 5px; left:80px; bottom: -30px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
       <img style="border-radius: 30px; text-align: center;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
-      <button style="border-radius: 30px;" class = "btn pink lighten-4 waves-effect" action="donate1" id="wearCard" data-id="${pic.id}" >Wear</button>
-      <button style="border-radius: 30px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
-      <button style="border-radius: 30px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
+      <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="wearCard" data-id="${pic.id}" >Wear</button>
+      <button style="border-radius: 30px; width: 250px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
+      <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
       </div>`
       $("#picsWear").prepend(card)
     });
@@ -158,7 +157,6 @@ $(document).ready(function () {
       url: "/api/wear/" + id
     })
       .then(function () {
-        getHomePics();
         reloadPage();
       });
   };
