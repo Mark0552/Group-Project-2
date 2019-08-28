@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0; 
   }
+
 #video {
     position: fixed;
     top: 50%;
@@ -13,10 +14,6 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
-img {
-    height: 200px;
-    width: 300px;
-}
 #donateBtn > h2 { 
     background: transparent;
     border: transparent; 
@@ -25,9 +22,6 @@ img {
     color: ivory;
 }
 
-#favoriteItem:hover { 
-    color: pink; 
-}
 #wearBtn > h2 { 
     background: transparent;
     border: transparent; 
@@ -47,100 +41,123 @@ img {
     margin: 10px; 
 }
 
-.navbar { 
+.navbar, .navbar-default { 
     border-radius: 10px; 
     box-shadow: 2px; 
     overflow: hidden;
 }
 
-#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 {
-    width: 300px;
-    height: 200px;
+#picsContainer > .card { 
+    margin: 10px;
+    width: 285px; 
+    height: 390px;
     float: left;
+    box-shadow: 2px; 
+}
+
+#picsDonate > .card{ 
+    margin: 10px;
+    width: 280px; 
+    height: 380px;
+    float: left;
+    box-shadow: 2px; 
+    text-align: center;
+}
+
+#picsContainer2 > .card-image, img {
+float: left;
+width: 175px; 
+height: 250px;
+box-shadow: 2px; 
+border-radius: 30px; 
+}
+    
+#picsContainer2 > .carousel-item, .carousel {
+margin: 10px;
+width: 300px; 
+height: 400px;
+box-shadow: 2px; 
+border-radius: 30px; 
+float: left;
+}
+
+#picsContainer3 > .carousel-item, .carousel {
+    margin: 10px;
+    width: 300px; 
+    height: 400px;
+    box-shadow: 2px; 
+    border-radius: 30px; 
+    float: left;
+    }
+
+#picsContainer3 { 
     position: relative;
-    left: 30px; 
-    bottom: -275px; 
+    left: 70px; 
 }
 
-#carouselRow, #carouselRow2, #carouselRow3, #carouselRow4, #carouselRow5, #carouselRow6 > .carousel {
-margin: 30px;
+#picsContainer4 > .card{ 
+border-radius: 30px; 
+box-shadow: 2px; 
+width: 300px; 
+height: 300px;
 }
 
-#signupRow, #loginRow { 
-color: black; 
-position: relative;
-bottom: 60px; 
-background:white; 
-left: -90px;
+#picsContainer4 > .carousel-item, .carousel{ 
+margin: 10px;
+width: 350px; 
+height: 250px;
+float: left;
+box-shadow: 2px; 
+border-radius: 30px; 
 }
 
 #addClothing { 
-color: ivory !important;
 text-align: center;
 font-family:'Tangerine', cursive;
-bottom: 400px; 
-left: 50px;
 }
 
 #addClothing > form, input { 
 margin:10px;
 text-align: center"
 }
-#addClothing > h2 { 
-margin:20px;
 
+#addClothing > h2 { 
+margin:10px;
 }
     
-#picsContainer{
-float: left; 
-position: relative;
-bottom: 600px;
-left: 30px;
-text-align: center;
-min-width: 100%;
+#favoriteItem:hover { 
+    color: pink; 
 }
 
-#picsContainer > .card{ 
-margin: 10px; 
-}
-
-#picsContainer2{
-    float: left; 
-    position: relative;
-    bottom: 525px;
-    left: 30px;
-    text-align: center;
-    min-width: 100%;
-}
-
-#picsContainer2 > .carousel-item{
-    margin: 10px; 
-
-}
 .card-image { 
-width: 200px; 
+height: 240px; 
+width: 250px;
+border-radius: 30px;
 }
-.card-panel, .card-image, .card { 
-border-radius: 15px;
-overflow: hidden;
+
+.card-panel, .card { 
+height: 350px; 
+width: 250px; 
+float: left;
+border-radius: 30px;
 }
 
 .btn {
 border-radius: 5px;
-overflow: hidden;
 margin: 2px; 
-width: 100px; 
-text-align:center;
 }
-#uploadbtn { 
-    left: 200px;
+
+input { 
+    color: ivory;
+}
+#signupRow, #loginRow { 
+    color: black; 
     position: relative;
-}
+    bottom: 60px; 
+    background:white; 
+    left: -90px;
+    }
 
-#fileUpload { 
-color: pink; 
-
-}
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;

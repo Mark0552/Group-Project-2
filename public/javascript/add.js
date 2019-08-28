@@ -5,100 +5,176 @@ $(document).ready(function () {
     $(".member-name").text(data.email);
   });
 
-  $(document).ready(function(){
-    $('.materialboxed').materialbox();
-  });
-
-  $(document).ready(function(){
-    $('.modal').modal();
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems);
-  });
 
 
-
-
-  function getPics() {
+  // Uploading pictures
+  function getHomePics() {
     $.ajax({
       type: "GET",
-      url: "/api/add",
+      url: "/api/home",
       dataType: "JSON",
     }).then((result) => {
       console.log(result);
-      postPics(result);
+      postHomePics(result);
+    }).catch((err) => {
+      console.log(err);
+    });
+    
+  }
+
+  function getDonatePics() {
+    $.ajax({
+      type: "GET",
+      url: "/api/donate",
+      dataType: "JSON",
+    }).then((result) => {
+      console.log(result);
+      postDonatePics(result);
     }).catch((err) => {
       console.log(err);
     });
   }
 
-  getPics()
-
-
-  
-
-  function postPics(results) {
-
-    results.forEach(pic => {
-        var picLink = pic.clothingLink.slice(7);
-
-      var card = `
-          <div class="card hoverable col s12" style = "width: 250px; float: left;">
-          <i style="z-index: 5px; left:100px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
-          <img style="width: 250px;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
-          <button class = "btn pink lighten-4 waves-effect" id="wearCard" data-id="${pic.id}" >Wear</button>
-          <button class = "btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
-          <button class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
-          </div>`
-
-          $("#picsContainer").prepend(card)
-        
-        var carousel = `<div class="carousel-item" style = "width: 200px;">
-          <img class="card-image hoverable" src="${picLink}" alt="Card image cap"></img>
-          </div>`
-          $("#picsContainer2").prepend(carousel)
-          M.AutoInit();
-
-    });    
+  function getWearPics() {
+    $.ajax({
+      type: "GET",
+      url: "/api/wear",
+      dataType: "JSON",
+    }).then((result) => {
+      console.log(result);
+      postWearPics(result);
+    }).catch((err) => {
+      console.log(err);
+    });
   }
 
+
+  getHomePics()
+  getDonatePics()
+  getWearPics()
+
+  function postHomePics(results) {
+    results.forEach(pic => {
+      var picLink = pic.clothingLink.slice(7);
+
+      var card = `
+          <div class="col s3 card hoverable" style="border-radius: 30px; float: left; margin: 10px; text-align: center; left: 75px;">
+          <i style="z-index: 5px; left:5px; bottom: -30px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
+          <img style="border-radius: 30px;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
+          <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="wearCard" data-id="${pic.id}" >Wear</button>
+          <button style="border-radius: 30px; width: 250px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
+          <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
+          </div>`
+          var carousel = `<div class="carousel-item" style="border-radius: 30px">
+          <img style="border-radius: 30px;" class="card-image hoverable materialboxed" src="${picLink}" alt="Card image cap"></img>
+          </div>`
+      $("#picsContainer").prepend(card)
+      $("#picsContainer3").prepend(carousel)
+      M.AutoInit();
+
+    });
+  }
+      
+  function postDonatePics(results) {
+    results.forEach(pic => {
+      var picLink = pic.clothingLink.slice(7);
+
+      var card = `<div class="col s4 card hoverable" style="border-radius: 30px; float: left; margin: 10px; text-align:center; left: 125px;">
+      <i style="z-index: 5px; left: -10px; bottom: -30px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
+      <img style="border-radius: 30px; text-align: center;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
+      <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="wearCard" data-id="${pic.id}" >Wear</button>
+      <button style="border-radius: 30px; width: 250px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
+      <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
+      </div>`
+      $("#picsDonate").prepend(card)
+    });
+  }
+
+  function postWearPics(results) {
+    results.forEach(pic => {
+      var picLink = pic.clothingLink.slice(7);
+
+      var card = `<div class="col s3 card hoverable" style="border-radius: 30px; float: left; margin: 10px; text-align:center; left: 125px;">
+      <i style="z-index: 5px; left:80px; bottom: -30px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
+      <img style="border-radius: 30px; text-align: center;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
+      <button style="border-radius: 30px;" class = "btn pink lighten-4 waves-effect" action="donate1" id="wearCard" data-id="${pic.id}" >Wear</button>
+      <button style="border-radius: 30px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
+      <button style="border-radius: 30px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
+      </div>`
+      $("#picsWear").prepend(card)
+    });
+  }
   ////// deletinggg////////////
-$(document).on("click", "#deleteCard",handlePostDelete)
+  $(document).on("click", "#deleteCard", handlePostDelete)
   function deleteCloths(id) {
     $.ajax({
       method: "DELETE",
-      url: "/api/add/" + id
+      url: "/api/home/" + id
     })
-      .then(function() {
-        getPics();
+      .then(function () {
+        reloadPage()
+        getHomePics()
       });
   }
+
   function handlePostDelete() {
     var currentCloths = $(this)
       .data("id");
-      console.log(currentCloths)
+    console.log(currentCloths)
     deleteCloths(currentCloths);
   }
+  // This Reload/Refreshes page after Delete button is pressed
+  function reloadPage() {
+    location.reload(true);
+  }
 
-  //////////donateeeee///////////
-  $(document).on("click", "#donateCard",handlePostDelete)
-  function doCloths(id) {
+  
+  $(document).on("click", "#donateCard", handleDonate)
+  function donateCloths(id) {
     $.ajax({
-      method: "DELETE",
-      url: "/api/add/" + id
+      method: "PUT",
+      url: "/api/home/" + id
     })
-      .then(function() {
-        getPics();
+      .then(function () {
+        getHomePics();
+        reloadPage();
       });
-  }
-  function handlePostDelete() {
+  };
+  function handleDonate() {
     var currentCloths = $(this)
       .data("id");
-      console.log(currentCloths)
-    deleteCloths(currentCloths);
+    console.log(currentCloths)
+    $("#picsDonate").prepend(currentCloths);
+    donateCloths(currentCloths);
+;
+
+  }
+
+    
+  $(document).on("click", "#wearCard", handleWear)
+  function wearCloths(id) {
+    $.ajax({
+      method: "PUT",
+      url: "/api/wear/" + id
+    })
+      .then(function () {
+        getHomePics();
+        reloadPage();
+      });
+  };
+  function handleWear() {
+    var currentCloths = $(this)
+      .data("id");
+    console.log(currentCloths)
+    $("#picsWear").prepend(currentCloths);
+    wearCloths(currentCloths);
+
   }
 
 
-  });
+}); 
+
+
+$('.materialboxed').materialbox();
+$('select').formSelect();
+$('.carousel').carousel();

@@ -3,13 +3,10 @@ module.exports = function (sequelize, DataTypes) {
         owner: {
             type: DataTypes.STRING
         },
+        status: {
+            type: DataTypes.STRING
+        },
         type: {
-            type: DataTypes.STRING
-        },
-        style: {
-            type: DataTypes.STRING
-        },
-        color: {
             type: DataTypes.STRING
         },
         clothingLink: {

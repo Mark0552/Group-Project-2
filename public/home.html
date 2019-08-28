@@ -1,140 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/style/css/reset.css">
-    <link rel="stylesheet" href="/style/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Great+Vibes|Reenie+Beanie&display=swap" rel="stylesheet">
-
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Home</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style/css/reset.css">
+<link rel="stylesheet" href="/style/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Great+Vibes|Reenie+Beanie&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 <!-- Start of the Navbar outside the container. -->
-<nav class="navbar navbar-default">
-<div class="container-fluid">
-<div class="navbar-header">
-<a class="navbar-brand" href="/logout.html">Logout</a>
-<a class="navbar-brand" href="/add.html">Add</a>
-<a class="navbar-brand" href="/donate.html">Donate</a>
-<a class="navbar-brand" href="/wear.html">Wear</a>
-<a class="navbar-brand" href="/members.html">Members</a>
-<a class="navbar-brand" href="/home.html">Home</a>
-</div>
-</div>
+<nav class="navbar navbar-default white">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand black-text" href="/logout">Logout</a>
+        <a class="navbar-brand black-text" href="/add.html">Add</a>
+        <a class="navbar-brand black-text" href="/donate.html">Donate</a>
+        <a class="navbar-brand black-text" href="/wear.html">Wear</a>
+        <a class="navbar-brand black-text" href="/home.html">Home</a>
+        </div>
+        </div>
 </nav>
 <!-- End of the Navbar outside the container. -->
 
-
+<!-- Start of the Main container. -->
 <div class="container"> 
-        
+
+<!-- Start of the Video Background. -->
 <video playsinline muted autoplay loop id="video">
-        <source src="/style/videos/Project2.m4v">
+        <source src="/videos/Project2.m4v">
 </video>
+<!-- End of the Video Background. -->
 
-<div class="row" id="silhouette" style="text-align: center; position: relative; bottom: -200px; left: 50px">
-        <img style="height: 300px" src="../style/images/dress_silhouette.png">
-</div>
-
-<div id="myBtnRow" class="row" style="text-align: center; position: relative; bottom: 300px;">
+<!-- Start of the Welcome to Your Closet Button. -->
+<div id="myBtnRow" class="row" style="text-align: center;">
 <a id="myBtn" class="button"><i class="">Welcome to Your Closet</i></a>
 </div>
+<!-- End of the Welcome to Your Closet Button. -->
 
+<!-- Start of the Silhouette Image/Logo. -->
+<div class="row" id="silhouette" style="text-align: center; position: relative; left: 185px;">
+        <img style ="height: 100%; width: 100%;" src="../images/dress_silhouette.png">
+        </div>
+<!-- End of the Silhouette Image/Logo. -->
+
+<!-- Start of the Your Closet Title, Once Clicked or after Timer Function. -->
 <h2 id="addCloset" style="color: ivory; font-family:'Tangerine', cursive; text-align: center; font-size: 100px;">Your Closet <span class="member-name"></span></h2>
+<!-- End of the Your Closet Title, Once Clicked or after Timer Function. -->
 
-                                
-        <div class="carousel" id="carouselRow">
-                <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/zip_top.jpeg"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/puff_top.jpeg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/pattern_top.png"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/pink_top.jpg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/redtop.png"></a>
-        </div>
+<!-- Start of the Carousels Row -->
+<div class="col s3 carousel" id="picsContainer2">
+        <a class="card-image carousel-item " href="JavaScript:Void(0);"><img
+                src="/images/tops_0.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_1.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_2.jpeg"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_3.jpeg"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_4.jpeg"></a>
+        <a class="card-image carousel-item " href="JavaScript:Void(0);"><img
+                src="/images/tops_5.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_6.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_7.jpg"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_8.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/tops_9.png"></a>
+</div>
 
-            <div class="carousel" id="carouselRow2">
-                <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/bluedress.png"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/pink_dress.png"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/wrap_dresses.png"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/dresses_floral.jpeg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/polkadotdress.png"></a>
-        </div>
+<div class="col s3 carousel" id="picsContainer2">
+        <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
+        src="/images/bottoms_0.jpg"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+        src="/images/bottoms_1.jpeg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+        src="/images/bottoms_2.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+        src="/images/bottoms_3.jpg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+        src="/images/bottoms_4.png"></a>
+</div>
+        
 
+<div class="col s3 carousel" id="picsContainer2">
+        <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
+                src="/images/shoes_0.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/shoes_1.jpg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+                src="/images/shoes_2.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+                src="/images/shoes_3.jpg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+                src="/images/shoes_4.jpg"></a>
+</div>
 
-            <div class="carousel" id="carouselRow3" >
-                <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/shoes_0.png"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/shoes_.jpg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/shoes_3.jpg"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/shoes_4.jpeg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/shoes_5.jpg"></a>
-        </div>
+<div class="col s3 carousel" id="picsContainer2">
+        <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
+        src="/images/accessories_0.jpeg"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+        src="/images/accessories_1.jpeg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+        src="/images/accessories_2.png"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+        src="/images/accessories_3.jpg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+        src="/images/accessories_4.png"></a>
+        <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
+        src="/images/bags_0.jpeg"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+        src="/images/bags_1.jpeg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+        src="/images/bags_2.jpeg"></a>
+        <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
+        src="/images/bags_3.jpeg"></a>
+        <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
+        src="/images/bags_4.jpeg"></a>
+</div>
 
-
-
-            <div class="carousel" id="carouselRow4">
-                <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/blackpants.png"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/ alfani_pants.jpg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/greypants.png"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/capri_pants.jpeg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/nike_gym.jpeg"></a>
-        </div>
-
-        <div class="carousel" id="carouselRow5">
-                <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/dooney_bag.jpeg"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/el_dorado_bag.jpeg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/kors_bag.jpeg"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/nine_west.jpeg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/ruby_bag.jpeg"></a>
-        </div>
-
-        <div class="carousel" id="carouselRow6">
-                <a class="card-image carousel-item" href="JavaScript:Void(0);"><img
-                        src="/images/ gem.jpeg"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/faux_Gem_Stud_Earring.jpg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/faux_leather_Hip_belt.png"></a>
-                <a class="carousel-item card-image " href="JavaScript:Void(0);"><img
-                        src="/images/scrunchie.jpeg"></a>
-                <a class="carousel-item card-image" href="JavaScript:Void(0);"><img
-                        src="/images/faux_Gem_Ear_Cuff.png"></a>
+<div class="col s3 carousel" id="picsContainer4">
         </div>
 </div>
+
+<!-- End of the Carousels Row -->
+
+
+<!-- End of the Main container. -->
+
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="/javascript/clothing.js"> </script>
+<script src="/javascript/home.js"> </script>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"> </script>
 </html>
