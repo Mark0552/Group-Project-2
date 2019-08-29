@@ -50,7 +50,7 @@
 #picsContainer > .card { 
     margin: 10px;
     width: 285px; 
-    height: 390px;
+    height: 330px;
     float: left;
     box-shadow: 2px; 
 }
@@ -101,7 +101,7 @@ float: left;
 
 #picsContainer3 { 
     position: relative;
-    left: 70px; 
+    left: 80px; 
 }
 
 #picsContainer4 > .card{ 

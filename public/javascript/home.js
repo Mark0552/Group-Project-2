@@ -146,7 +146,7 @@ $('#picsContainer2').delay(5000).animate({
 
   }); 
 
-
+  
   $('.materialboxed').materialbox();
   $('select').formSelect();
   $('.carousel').carousel();

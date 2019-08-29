@@ -59,17 +59,28 @@ $(document).ready(function () {
 
       var card = `
           <div class="col s3 card hoverable" style="border-radius: 30px; float: left; margin: 10px; text-align: center; left: 75px;">
-          <i style="z-index: 5px; left:5px; bottom: -30px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
           <img style="border-radius: 30px;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
-          <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="wearCard" data-id="${pic.id}" >Wear</button>
           <button style="border-radius: 30px; width: 250px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
           <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
           </div>`
           var carousel = `<div class="carousel-item" style="border-radius: 30px">
           <img style="border-radius: 30px;" class="card-image hoverable materialboxed" src="${picLink}" alt="Card image cap"></img>
           </div>`
-      $("#picsContainer").prepend(card)
       $("#picsContainer3").prepend(carousel)
+      $("#picsContainer").prepend(card)
+
+      // if (pic.type === "tops"){
+      //   $("#topsPics").prepend(carousel);
+      // }
+      // if (pic.type === "bottoms"){
+      //   $("#bottomsPics").prepend(carousel);
+      // }
+      // if (pic.type === "shoes"){
+      //   $("#shoesPics").prepend(carousel);
+      // }
+      // if (pic.type === "accessories"){
+      //   $("#accessoriesPics").prepend(carousel);
+      // }
       M.AutoInit();
 
     });
@@ -80,9 +91,7 @@ $(document).ready(function () {
       var picLink = pic.clothingLink.slice(7);
 
       var card = `<div class="col s4 card hoverable" style="border-radius: 30px; float: left; margin: 10px; text-align:center; left: 125px;">
-      <i style="z-index: 5px; left: -10px; bottom: -30px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
       <img style="border-radius: 30px; text-align: center;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
-      <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="wearCard" data-id="${pic.id}" >Wear</button>
       <button style="border-radius: 30px; width: 250px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
       <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
       </div>`
@@ -94,9 +103,7 @@ $(document).ready(function () {
     results.forEach(pic => {
       var picLink = pic.clothingLink.slice(7);
       var card = `<div class="col s4 card hoverable" style="border-radius: 30px; float: left; margin: 30px; height: 400px; text-align:center; left: 125px;">
-      <i style="z-index: 5px; left:80px; bottom: -30px;" id="favoriteItem" class="material-icons waves-effect">favorite_border</i>
       <img style="border-radius: 30px; text-align: center;" class="materialboxed card-image" src="${picLink}" alt="Card image cap"></img>
-      <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="wearCard" data-id="${pic.id}" >Wear</button>
       <button style="border-radius: 30px; width: 250px;" class="btn pink lighten-4 waves-effect" action="donate1" id="donateCard" data-id="${pic.id}" >Donate</button>
       <button style="border-radius: 30px; width: 250px;" class = "btn pink lighten-4 waves-effect" id="deleteCard" data-id="${pic.id}" >Delete</button>
       </div>`
@@ -173,6 +180,14 @@ $(document).ready(function () {
 }); 
 
 
+$("#picsContainer2").hide(100);
+
+$("#myBtnRow, #silhouette").hide(100)
+
+
+
+$('#picsContainer2').delay(5000).animate({
+  bottom: '-30px'}, "slow");
 $('.materialboxed').materialbox();
 $('select').formSelect();
 $('.carousel').carousel();

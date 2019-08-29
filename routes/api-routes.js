@@ -1,4 +1,5 @@
 
+
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
@@ -183,7 +184,7 @@ app.put("/api/home/:id", function (req, res) {
   ).then(function (dbCloths) {
     res.json(dbCloths);
   })  
-app.get("/api/wear/:id", function (req, res) {
+app.get("/api/wear", function (req, res) {
   console.log(req.params.id, 'this');
   db.Cloths.findAll({
     where: {
@@ -204,7 +205,3 @@ app.get("/api/wear/:id", function (req, res) {
 
 
 };
-
-
-
-
