@@ -2,7 +2,7 @@ var Sequelize = require("sequelize");
 
 var sequelizeConn = new Sequelize("clothing_db", "root", "password", {
     host: "localhost",
-    port: 3305,
+    port: 3000,
     dialect: "mysql",
     pool: {
         max: 5,
