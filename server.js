@@ -2,6 +2,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
+var cookieParser = require('cookie-parser')
+
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
 //
