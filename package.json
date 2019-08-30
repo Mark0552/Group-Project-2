@@ -5,18 +5,18 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mark0552/Group-Project-2.git"
   },
-  "author": "Mark",
+  "author": "izzydavid",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mark0552/Group-Project-2/issues"
+    "url": "https://intense-beach-82038.herokuapp.com/"
   },
-  "homepage": "https://github.com/Mark0552/Group-Project-2#readme",
+  "homepage": "https://intense-beach-82038.herokuapp.com/",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bcryptjs": "^2.4.3",
