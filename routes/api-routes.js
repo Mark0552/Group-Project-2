@@ -71,7 +71,7 @@ var db = require('../models');
 // default options
 app.use(fileUpload());
 
-app.get("/api/add/", function(req, res) {
+app.get("/api/add", function(req, res) {
   console.log(req.params.id, 'this');
   
   db.Cloths.findAll({
